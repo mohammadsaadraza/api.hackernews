@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres
+    restart: always
+    volumes:
+      - data:/var/lib/postgresql/data
+      
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hackerdata
+      
+volume:
+  data:
